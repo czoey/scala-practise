@@ -1,6 +1,6 @@
 object Kata {
   def isFlush(cards: List[String]): Boolean = {
-  	val testChar = cards.apply(0).takeRight(1)
+  	val testChar = cards.apply .takeRight(1)
   	var i = 1
   	var res = true
   	while(i < 5) {
