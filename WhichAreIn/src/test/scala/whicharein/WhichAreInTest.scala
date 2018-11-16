@@ -1,3 +1,5 @@
+package whicharein
+
 import org.scalatest._
 import org.scalatest.Assertions._
 
