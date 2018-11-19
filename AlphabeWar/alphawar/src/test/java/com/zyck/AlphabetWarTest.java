@@ -1,15 +1,23 @@
 package com.zyck;
 
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
-import org.junit.runners.JUnit4;
+import org.testng.annotations.Test;
+import org.testng.Assert;
 
-public class AlphabetWarTest {  
+import static org.assertj.core.api.Assertions.*;
+
+
+
+public class AlphabetWarTest { 
     @Test
-    public void BasicTest() {
-       assertEquals("Right side wins!", AlphabetWar.alphabetWar("z"));
-       assertEquals("Let's fight again!", AlphabetWar.alphabetWar("zdqmwpbs"));
-       assertEquals("Right side wins!", AlphabetWar.alphabetWar("zzzzs"));
-       assertEquals("Left side wins!", AlphabetWar.alphabetWar("wwwwwwz"));
+    public void test() {
+        Assert.assertEquals("Right side wins!",AlphabetWar.alphabetWar("z"));
+        Assert.assertEquals("Let's fight again!",AlphabetWar.alphabetWar("zdqmwpbs"));
+        Assert.assertEquals("Right side wins!", AlphabetWar.alphabetWar("zzzzs"));
+        Assert.assertEquals("Left side wins!", AlphabetWar.alphabetWar("wwwwwwz"));
+
+        assertThat("Right side wins!").isEqualTo(AlphabetWar.alphabetWar("z"));
+        assertThat("Let's fight again!").isEqualTo(AlphabetWar.alphabetWar("zdqmwpbs"));
+        assertThat("Right side wins!").isEqualTo( AlphabetWar.alphabetWar("zzzzs"));
+        assertThat("Left side wins!").isEqualTo(AlphabetWar.alphabetWar("wwwwwwz"));
     }
 }
